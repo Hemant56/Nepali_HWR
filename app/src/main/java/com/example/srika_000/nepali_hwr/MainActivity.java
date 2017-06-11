@@ -135,6 +135,7 @@ public class MainActivity extends AppCompatActivity
                 startActivity(intentFab);
 
 
+                //There is something
             }
         });
 
@@ -155,6 +156,9 @@ public class MainActivity extends AppCompatActivity
 
                                 finish();
 
+
+
+                                //Finished too work
                             }
                         })
                         .setNegativeButton("Cancel", null)
