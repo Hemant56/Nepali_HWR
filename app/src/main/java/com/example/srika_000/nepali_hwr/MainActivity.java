@@ -68,6 +68,10 @@ public class MainActivity extends AppCompatActivity
     FloatingActionButton fab, fab1, fab2;
     Animation fab_open, fab_close, clock, anticlock;
 
+    /*This is the animation
+
+     */
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -133,9 +137,6 @@ public class MainActivity extends AppCompatActivity
 
                 Intent intentFab = new Intent(getApplicationContext(), Tutorial.class);
                 startActivity(intentFab);
-
-
-                //There is something
             }
         });
 
@@ -163,8 +164,6 @@ public class MainActivity extends AppCompatActivity
                         })
                         .setNegativeButton("Cancel", null)
                         .show();
-//nwo what to do
-//Changes become ha
 
             }
         });
