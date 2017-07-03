@@ -23,6 +23,8 @@ public class Offline_OCR extends AppCompatActivity {
 
     SurfaceView cameraview;
     TextView textView;
+
+
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
