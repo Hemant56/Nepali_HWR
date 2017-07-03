@@ -26,6 +26,9 @@ public class Offline_OCR extends AppCompatActivity {
     TextView textView;
 
     ImageView imageView;
+    /*
+
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
