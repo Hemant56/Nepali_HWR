@@ -1,13 +1,9 @@
 package com.example.srika_000.nepali_hwr;
 
 import android.content.Intent;
-import android.graphics.Bitmap;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.content.DialogInterface;
 import android.gesture.Gesture;
 import android.gesture.GestureLibraries;
@@ -16,26 +12,16 @@ import android.gesture.GestureOverlayView;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
-import android.os.Bundle;
 import android.os.Environment;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
-import android.view.View;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.File;
-import java.io.FileOutputStream;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 public class AddHere extends AppCompatActivity {
     private GestureLibrary gLib;
@@ -72,7 +58,7 @@ public class AddHere extends AppCompatActivity {
 
 
 
-        gLib = GestureLibraries.fromFile(getExternalFilesDir(null) + "/" + "gesture.txt");
+        gLib = GestureLibraries.fromFile(getExternalFilesDir(null) + "/" + "src/main/raw/gesture.txt");
         gLib.load();
 
         GestureOverlayView gestures = (GestureOverlayView) findViewById(R.id.gestures);
@@ -220,7 +206,7 @@ public class AddHere extends AppCompatActivity {
         if (!gLib.save()) {
             Log.e(TAG, "gesture not saved!");
         } else {
-            showToast(getString(R.string.gesture_saved) + getExternalFilesDir(null) + "/gesture.txt");
+            showToast(getString(R.string.gesture_saved) + getExternalFilesDir(null) + "/src/main/raw/gesture.txt");
         }
         reDrawGestureView(); //reDrawGestureView() function lai invoke gareko ;
         // }

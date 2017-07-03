@@ -1,7 +1,6 @@
 package com.example.srika_000.nepali_hwr;
 
 import android.content.ClipData;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.gesture.Gesture;
@@ -9,14 +8,9 @@ import android.gesture.GestureLibraries;
 import android.gesture.GestureLibrary;
 import android.gesture.GestureOverlayView;
 import android.gesture.Prediction;
-import android.graphics.Bitmap;
 import android.graphics.Typeface;
-import android.icu.util.Output;
 import android.os.Bundle;
-import android.os.Environment;
-import android.provider.ContactsContract;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
 import android.util.DisplayMetrics;
 import android.util.Log;
@@ -36,18 +30,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.content.ClipboardManager;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.OutputStream;
-import java.security.PrivateKey;
 import java.util.ArrayList;
-
-import static android.R.attr.contextClickable;
-import static android.R.attr.label;
-import static android.R.attr.showText;
-import static android.R.attr.text;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -205,7 +188,11 @@ public class MainActivity extends AppCompatActivity
 
 //<!--.............-->
         openOptionsMenu();
-        gLib = GestureLibraries.fromFile(getExternalFilesDir(null) + "/" + "gesture.txt");
+       //gLib=GestureLibraries.fromFile("gesture.txt");
+
+       // String getDrirectory = file.getParent();
+
+        gLib = GestureLibraries.fromFile(getExternalFilesDir(null) + "/" + "src/main/raw/gesture.txt");
         gLib.load();
 
         // GestureOverlayView gestures = (GestureOverlayView) findViewById(R.id.gestures);
@@ -310,6 +297,7 @@ public class MainActivity extends AppCompatActivity
         @Override
         public void onGesturePerformed(GestureOverlayView gestureView,
                                        final Gesture gesture) {
+
 
 
             ArrayList<Prediction> predictions = gLib.recognize(gesture);
