@@ -14,6 +14,7 @@ import android.util.SparseArray;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.io.IOException;
@@ -24,8 +25,7 @@ public class Offline_OCR extends AppCompatActivity {
     SurfaceView cameraview;
     TextView textView;
 
-
-    
+    ImageView imageView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
