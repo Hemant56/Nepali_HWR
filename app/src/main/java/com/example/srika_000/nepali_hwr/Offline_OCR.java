@@ -35,3 +35,4 @@ public class Offline_OCR extends AppCompatActivity {
         }
     }
 
+
