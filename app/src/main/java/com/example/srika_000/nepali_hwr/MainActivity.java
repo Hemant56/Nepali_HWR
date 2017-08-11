@@ -71,6 +71,8 @@ public class MainActivity extends AppCompatActivity
         backspace=(ImageButton) findViewById(R.id.bBackSpace);
 
 
+
+
         fab_open = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fab_open);
         fab_close = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fab_close);
         clock = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.clock);
@@ -192,7 +194,8 @@ public class MainActivity extends AppCompatActivity
 
        // String getDrirectory = file.getParent();
 
-        gLib = GestureLibraries.fromFile(getExternalFilesDir(null) + "/" + "src/main/raw/gesture.txt");
+      //  gLib = GestureLibraries.fromFile(getExternalFilesDir(null) + "/" + "src/main/raw/gesture.txt");
+        gLib=GestureLibraries.fromRawResource(this,R.raw.gesture2);
         gLib.load();
 
         // GestureOverlayView gestures = (GestureOverlayView) findViewById(R.id.gestures);
